@@ -1,23 +1,20 @@
-# Django Project
+🐍 Django Project Deployment with Docker (Ubuntu)
 
-A web application built with Django.
+A Django web application containerized using Docker and deployed on an Ubuntu server (AWS EC2 or local Ubuntu).
 
-## 🚀 Features
+🚀 Features
 
-- Responsive UI
+* Django Web Application
+* Dockerized Deployment
+* Lightweight Python 3.12 Image
+* Easy Setup on Ubuntu Server
+* Beginner Friendly Steps
 
----
+🛠️ Tech Stack
 
-## 🛠️ Tech Stack
-- Python 3.x
-- Django 4.x
-- SQLite / PostgreSQL
-- HTML, CSS, JavaScript (Bootstrap optional)
-
----
-
-## 📦 Installation & Setup (Real-Time Steps)
-
-1️⃣ Update System
-
-sudo apt update
+* Python 3.12
+* Django
+* Docker
+* Ubuntu (AWS EC2)
+* SQLite / PostgreSQL
+* HTML, CSS, JavaScript
