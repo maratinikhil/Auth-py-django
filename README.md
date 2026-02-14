@@ -19,4 +19,5 @@ A web application built with Django.
 ## 📦 Installation & Setup (Real-Time Steps)
 
 1️⃣ Update System
+
 sudo apt update
