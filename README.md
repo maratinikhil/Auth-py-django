@@ -18,7 +18,5 @@ A web application built with Django.
 
 ## 📦 Installation & Setup (Real-Time Steps)
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/maratinikhil/Auth-py-django.git
-cd Auth-py-django
+1️⃣ Update System
+sudo apt update
