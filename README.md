@@ -51,44 +51,50 @@ cd Auth-py-django
 * https://docs.docker.com/engine/install/ubuntu/
 
 4️⃣ Verify Docker Installation
-docker info
+
+* docker info
 
 5️⃣ Add User to Docker Group
-sudo usermod -aG docker ubuntu
+
+* sudo usermod -aG docker ubuntu
 
 6️⃣ Verify Docker Again
-docker info
+
+* docker info
 
 7️⃣ Logout and Login Again
-exit
 
+*exit
 
 Login again and check:
 
-docker info
+* docker info
 
 8️⃣ Create Dockerfile
-vi pydockerfile
+
+* vi pydockerfile
 
 
 9️⃣ Build Docker Image
-docker image build -t pyapp:1.0 -f pydockerfile .
+
+* docker image build -t pyapp:1.0 -f pydockerfile .
 
 🔟 List Docker Images
-docker image ls
+
+* docker image ls
 
 1️⃣1️⃣ Run Docker Container
-docker container run -d -P --name myapp pyapp:1.0
+
+* docker container run -d -P --name myapp pyapp:1.0
 
 1️⃣2️⃣ Check Running Containers
-docker ps -a
+
+* docker ps -a
 
 🌍 Access the Application
 
 Open your browser and go to:
-
-http://<SERVER_PUBLIC_IP>:8000
-
+* http://<SERVER_PUBLIC_IP>:8000
 
 Admin Panel:
 
