@@ -5,26 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Segoe UI", sans-serif;
-        }
-
-        body {
-            height: 100vh;
-            background: linear-gradient(270deg, #6a11cb, #2575fc);
-            background-size: 400% 400%;
-            animation: gradientBG 10s ease infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            color: white;
-        }
-
         @keyframes gradientBG {
             0% {
                 background-position: 0% 50%;
@@ -39,15 +21,6 @@
             }
         }
 
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 40px 60px;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
-        }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -58,48 +31,6 @@
                 opacity: 1;
                 transform: scale(1);
             }
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        #clock {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        button {
-            margin-top: 25px;
-            padding: 12px 30px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            background: #ff9800;
-            color: white;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            transform: scale(1.1);
-            background: #ffc107;
-        }
-
-        /* Floating bubbles */
-        .bubble {
-            position: absolute;
-            bottom: -100px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            animation: floatUp 10s infinite linear;
         }
 
         @keyframes floatUp {
@@ -113,16 +44,39 @@
                 opacity: 0;
             }
         }
+
+        .animated-gradient {
+            background: linear-gradient(270deg, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: floatUp 10s infinite linear;
+        }
     </style>
 </head>
 
-<body>
+<body class="h-screen animated-gradient flex justify-center items-center overflow-hidden text-white m-0 p-0">
 
-    <div class="container">
-        <h1>🚀 Welcome to Django Home</h1>
-        <div id="clock"></div>
-        <p>Real-time animated web page</p>
-        <button onclick="alert('Hello from Django!')">Click Me</button>
+    <div class="text-center bg-black/40 py-10 px-16 rounded-2xl shadow-2xl fade-in">
+        <h1 class="text-5xl mb-5 font-bold">🚀 Welcome to Django Home</h1>
+        <div id="clock" class="text-4xl mb-5 tracking-wider font-mono"></div>
+        <p class="text-lg opacity-90">Real-time animated web page</p>
+
+        <!-- Updated button to open in new page -->
+        <a href="{% url 'clickme' %}"
+            class="inline-block mt-6 px-8 py-3 text-base rounded-full cursor-pointer bg-orange-500 text-white hover:scale-110 hover:bg-amber-400 transition-all duration-300 border-none no-underline">
+            Click Me
+        </a>
     </div>
 
     <!-- Floating bubbles -->

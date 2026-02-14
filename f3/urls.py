@@ -21,5 +21,7 @@ from app4 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.Test.as_view(), name="home"),
+    path('clickme/', views.Clickme.as_view(), name='clickme'),
+
 ]
 
