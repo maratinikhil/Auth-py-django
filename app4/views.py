@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
+from django.views import View
 
-def class1(request):
-    return HttpResponse("<tt>Functional Component<tt/>")
+class Test(View):
+    def get(self, request):
+        return render(request,"home.html")

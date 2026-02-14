@@ -20,5 +20,6 @@ from app4 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.class1),
+    path("", views.Test.as_view(), name="home"),
 ]
+
