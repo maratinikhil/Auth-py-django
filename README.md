@@ -36,33 +36,33 @@ Prerequisites
 * AWS account (if using EC2)
 
 
-1️⃣ Update System
+1️ Update System
 
 * sudo apt update
 
-2️⃣ Clone GitHub Repository
+2️ Clone GitHub Repository
 
 * git clone https://github.com/maratinikhil/Auth-py-django.git
 cd Auth-py-django
 
-3️⃣ Install Docker (Official Documentation)
+3️ Install Docker (Official Documentation)
 
 * Install Docker from Docker official site:
 * https://docs.docker.com/engine/install/ubuntu/
 
-4️⃣ Verify Docker Installation
+4️ Verify Docker Installation
 
 * docker info
 
-5️⃣ Add User to Docker Group
+5️ Add User to Docker Group
 
 * sudo usermod -aG docker ubuntu
 
-6️⃣ Verify Docker Again
+6️ Verify Docker Again
 
 * docker info
 
-7️⃣ Logout and Login Again
+7️ Logout and Login Again
 
 *exit
 
@@ -70,24 +70,24 @@ Login again and check:
 
 * docker info
 
-8️⃣ Create Dockerfile
+8️ Create Dockerfile
 
 * vi pydockerfile
 
 
-9️⃣ Build Docker Image
+9️ Build Docker Image
 
 * docker image build -t pyapp:1.0 -f pydockerfile .
 
-🔟 List Docker Images
+10 List Docker Images
 
 * docker image ls
 
-1️⃣1️⃣ Run Docker Container
+1️1️ Run Docker Container
 
 * docker container run -d -P --name myapp pyapp:1.0
 
-1️⃣2️⃣ Check Running Containers
+1️2️ Check Running Containers
 
 * docker ps -a
 
