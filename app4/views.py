@@ -5,7 +5,7 @@ from django.views import View
 
 class Test(View):
     def get(self, request):
-        return render(request,"home.html")
+        return render(request,"Home.html")
     
 class Clickme(View):
     def get(self, request):
