@@ -22,7 +22,7 @@ pipeline{
         stage ("build & scane") {
             steps {
                 withCredentials([string(credentialsId: "sonarcloud_id", variable: "SONAR_TOKEN")]){
-                withSonarQubeEnv("SONAR") {
+                withSonarQubeEnv("sonar_id") {
                     sh """sonar-scanner \
                         -Dsonar.projectKey=maratinikhil_Auth-py-django \
                         -Dsonar.organization=maratinikhil \
@@ -35,6 +35,3 @@ pipeline{
         }
     }
 }
-
-
-
