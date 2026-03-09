@@ -27,6 +27,7 @@ pipeline{
                         -Dsonar.projectKey=maratinikhil_Auth-py-django \
                         -Dsonar.organization=maratinikhil \
                         -Dsonar.host.url=https://sonarcloud.io \
+                        -Dsonar.sources=. \
                         -Dsonar.login=$SONAR_TOKEN
                     """
                 }
