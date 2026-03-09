@@ -1,7 +1,7 @@
 pipeline{
     agent {label "Python-Sample-Project"}
     tools {
-        sonar 'sonar-scanner'
+        hudson.plugins.sonar.SonarRunnerInstallation 'sonar-scanner'
     }
     triggers {
         pollSCM('* * * * *')
