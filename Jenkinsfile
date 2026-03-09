@@ -23,8 +23,7 @@ pipeline{
             steps {
                 withCredentials([string(credentialsId: "sonar_id", variable: "SONAR_TOKEN")])
                 withSonarQubeEnv("SONAR") {
-                    sh 
-                    """ mvn package sonar:sonar \
+                    sh """ mvn package sonar:sonar \
                         -Dsonar.projectKey=maratinikhil_Auth-py-django \
                         -Dsonar.organization=maratinikhil \
                         -Dsonar.host.url=https://sonarcloud.io/
