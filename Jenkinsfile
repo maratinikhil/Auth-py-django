@@ -1,7 +1,7 @@
 pipeline{
     agent {label "Python-Sample-Project"}
     tools {
-        sonarQubeScanner 'sonar-scanner'
+        sonarRunner 'sonar-scanner'
     }
     triggers {
         pollSCM('* * * * *')
