@@ -21,7 +21,7 @@ pipeline{
         }
         stage ("build & scane") {
             steps {
-                withCredentials([string(credentialsId: "sonar_id", variable: "SONAR_TOKEN")])
+                withCredentials([string(credentialsId: "sonar_id", variable: "SONAR_TOKEN")]){
                 withSonarQubeEnv("SONAR") {
                     sh """ mvn package sonar:sonar \
                         -Dsonar.projectKey=maratinikhil_Auth-py-django \
@@ -29,6 +29,7 @@ pipeline{
                         -Dsonar.host.url=https://sonarcloud.io/
                         -Dsonar.login=$SONAR_TOKEN
                     """
+                }
                 }
             }
         }
