@@ -1,5 +1,8 @@
 pipeline{
     agent {label "Python-Sample-Project"}
+    environment {
+        SCANNER_HOME = tool "sonar-scanner"
+    }
     triggers {
         pollSCM('* * * * *')
     }
@@ -23,7 +26,7 @@ pipeline{
             steps {
                 withCredentials([string(credentialsId: "sonarcloud_id", variable: "SONAR_TOKEN")]){
                 withSonarQubeEnv("sonar_id") {
-                    sh """sonar-scanner \
+                    sh """$SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectKey=maratinikhil_Auth-py-django \
                         -Dsonar.organization=maratinikhil \
                         -Dsonar.host.url=https://sonarcloud.io \
