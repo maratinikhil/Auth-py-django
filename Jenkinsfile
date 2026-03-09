@@ -1,6 +1,6 @@
 pipeline{
     agent {label "Python-Sample-Project"}
-    tools {
+    tool {
         hudson.plugins.sonar.SonarRunnerInstallation 'sonar-scanner'
     }
     triggers {
